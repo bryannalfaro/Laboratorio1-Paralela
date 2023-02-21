@@ -12,15 +12,16 @@ int main(int argc, char* argv[]) {
     //measure time
     double start = omp_get_wtime();
     for (k = 0; k < n; k++) {
-    sum  += factor/(2*k+1);
-    factor = -(factor);
+      sum  += factor/(2*k+1);
+      factor = -(factor);
     }
     pi_approx = 4.0*sum;
+
     double end = omp_get_wtime();
     double delta = end - start;
-    printf("Time: %f seconds", delta);
+    printf("Time: %f seconds\n", delta);
+    printf("pi_approx = %f\n", pi_approx);
 
-     printf("pi_approx = %f", pi_approx);
 
   return 0;
 }
