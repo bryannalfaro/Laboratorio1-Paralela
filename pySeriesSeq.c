@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
     double factor = 1.0;
     double sum = 0.0;
-    int k, n = 10e8;
+    int k, n = 10e7;
     double pi_approx;
 
     //measure time
@@ -19,9 +19,11 @@ int main(int argc, char* argv[]) {
 
     double end = omp_get_wtime();
     double delta = end - start;
+
     printf("Time: %f seconds\n", delta);
     printf("pi_approx = %f\n", pi_approx);
+    printf("N = %d\n", n);
 
 
-  return 0;
+    return 0;
 }

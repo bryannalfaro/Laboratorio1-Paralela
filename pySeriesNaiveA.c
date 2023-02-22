@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
     double factor = 1.0;
     double sum = 0.0;
-    int k, n = 10e8;
+    int k, n = 10e6;
     int thread_count = 4;
     double pi_approx;
 
@@ -19,12 +19,12 @@ int main(int argc, char* argv[]) {
       factor = -(factor);
     }
     pi_approx = 4.0*sum;
-    printf("pi_approx = %f\n", pi_approx);
 
     double end = omp_get_wtime();
     double delta = end - start;
 
     printf("Time: %f seconds\n", delta);
+    printf("pi_approx: %f\n", pi_approx);
 
-  return 0;
+    return 0;
 }
