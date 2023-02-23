@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
     double factor = 1.0;
     double sum = 0.0;
-    int k, n = 10e7;
+    int k, n = 16 * 10e7;
     int thread_count = 16;
     double pi_approx;
     double start, end,delta;

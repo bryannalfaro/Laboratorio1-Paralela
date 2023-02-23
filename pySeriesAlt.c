@@ -6,8 +6,8 @@ int main(int argc, char* argv[]) {
     double sum = 0.0;
     double sub = 0.0;
 
-    int k, n = 10e8;
-    int thread_count = 8;
+    int k, n = 10e6;
+    int thread_count = 6;
     double pi_approx;
 
     double start, end,delta;

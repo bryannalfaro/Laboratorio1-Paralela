@@ -7,10 +7,9 @@
 int main(int argc, char* argv[]) {
     double factor = 1.0;
     double sum = 0.0;
-    int k, n = 10e8;
-    int thread_count = 10;
+    int k, n = 10e7;
+    int thread_count = 6;
     double pi_approx;
-    double seq_time = 0.3681;
 
     double start, end,delta;
 
@@ -37,9 +36,6 @@ int main(int argc, char* argv[]) {
     printf("\n");
     printf("Time: %f seconds \n", delta);
     printf("\n");
-    printf("Speedup: %f \n", seq_time/delta);
-    printf("\n");
-    printf("Efficiency: %f \n", (seq_time/delta)/thread_count);
 
   return 0;
 }
